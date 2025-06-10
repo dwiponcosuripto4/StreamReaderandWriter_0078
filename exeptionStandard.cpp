@@ -19,7 +19,7 @@ int main()
     {
         // menangkap menggunakan obyek exception
         cout << e.what() << endl;
-        //*akan dieksekusi jika terjadi exception
+        /*akan dieskeskusi karna array data hanya memiliki 3 elemen*/
     }
     cout << "Baris Program yang terakhir" << endl;
     /*Penanda 2 : bahwa program berjalan tanpa berhenti meskipun terjadi kesalahan*/
