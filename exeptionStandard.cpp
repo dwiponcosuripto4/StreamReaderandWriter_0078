@@ -17,8 +17,9 @@ int main()
     }
     catch (exception &e)
     {
-        //
+        // menangkap menggunakan obyek exception
         cout << e.what() << endl;
+        //*akan dieksekusi jika terjadi exception
     }
     cout << "Baris Program yang terakhir" << endl;
     return 0;
