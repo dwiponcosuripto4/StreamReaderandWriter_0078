@@ -11,7 +11,7 @@ int main()
     }
     catch (int a)
     {
-        /*jika integer maka bloc ini akan dieksekusi*/
+        // blok ini akan dieksekusi jika terjadi exception
         cout << "Pernyataan akan dieksekusi" << endl; // penanda 2: menangkap exception
     }
     catch (...)
