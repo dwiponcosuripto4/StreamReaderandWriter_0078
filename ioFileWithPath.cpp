@@ -12,22 +12,38 @@ int main()
 
     // Membuka file dalam mode menulis
     ofstream outFile;
-    // Menunj
+    // Menunjuk ke sebuah nama file
     outFile.open(NamaFile + ".txt", ios::out);
     cout << ">= Menulis File, \'q' untuk keluar" << endl;
-
+    // unlimited loop untuk menulis
     while (true)
     {
         cout << "- ";
+        // mendapatkan setiap karakter dalam satu baris
         getline(cin, baris);
-
-        // Memeriksa apakah pengguna ingin keluar
+        // loop akan berhenti jika pengguna memasukkan 'q'
         if (baris == "q")
         {
-            break; // Keluar dari loop jika pengguna memasukkan 'q'
+            break; // Menulis dan memasukkan nilai dari 'baris' ke file
         }
 
         // Menulis baris ke file
         outFile << baris << endl;
+        outFile.close();
+        ifstream inFile;
+        inFile.open(NamaFile, ios::in);
+        cout << endl
+             << "Membukan dan membaca file " << endl;
+        if (inFile.is_open())
+        {
+            while (getline(inFile, baris))
+            {
+                cout << baris << '\n'; // Menampilkan isi file
+            }
+            inFile.close(); // Menutup file setelah selesai membaca
+        }
+        else
+        {
+            cout << "Tidak dapat membuka file." << endl;
+        }
     }
-}
