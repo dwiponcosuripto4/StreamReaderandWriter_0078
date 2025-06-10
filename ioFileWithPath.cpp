@@ -43,7 +43,6 @@ int main()
             inFile.close(); // Menutup file setelah selesai membaca
         }
         else
-        {
-            cout << "Tidak dapat membuka file." << endl;
-        }
+            cout << "Tidak dapat membuka file.";
+        return 0;
     }
