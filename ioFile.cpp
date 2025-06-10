@@ -12,5 +12,13 @@ int main()
     // Menunjuk ke sebuah nama file
     outfile.open("data.txt");
 
-    cout << "Masukkan data (ketik 'exit' untuk keluar):" << endl;
+    cout << ">= Menulis File, \'q\' untuk keluar" << endl;
+
+    // unlimited loop untuk menulis
+    while (true)
+    {
+        cout << "- ";
+        // mendapatkan setiap karakter dalam satu baris
+        getline(cin, baris);
+    }
 }
