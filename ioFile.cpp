@@ -40,7 +40,14 @@ int main()
         // melakukan perulangan setiap baris
         while (getline(infile, baris))
         {
-            // menampilkan setiap baris ke layar
+            // dan tampilkan disini
             cout << baris << '\n';
         }
+        // tutup file tersebut setelah selesai
+        infile.close();
     }
+    // jika tidak ditemukan file maka akan menampilkan ini
+    else
+        cout << "File tidak ditemukan!" << endl;
+    return 0;
+}
